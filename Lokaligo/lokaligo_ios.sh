@@ -52,12 +52,11 @@ function check_env_vars {
   fi
 }
 
-function check_xcodeproj_ruby_module {
-  ruby -e "require 'xcodeproj'"
-}
-
-check_xcodeproj_ruby_module
 check_file
 check_env_vars
 
-SRCROOT="${SRCROOT}" LOKALIGO_API_KEY="${LOKALIGO_API_KEY}" CONFIGURATION="Debug" LOKALIGO_DEV="${LOKALIGO_DEV}" CRASH_ON_ERROR="1" ruby "${BUILD_FILE}"
+if [ -z "$LOKALIGO_DEV" ]; then
+  SRCROOT="${SRCROOT}" LOKALIGO_API_KEY="${LOKALIGO_API_KEY}" CONFIGURATION="Debug" CRASH_ON_ERROR="1" ruby "${BUILD_FILE}"
+else
+  SRCROOT="${SRCROOT}" LOKALIGO_API_KEY="${LOKALIGO_API_KEY}" CONFIGURATION="Debug" LOKALIGO_DEV="${LOKALIGO_DEV}" CRASH_ON_ERROR="1" ruby "${BUILD_FILE}"
+fi
