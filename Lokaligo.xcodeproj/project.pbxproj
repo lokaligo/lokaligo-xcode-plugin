@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		233A69B11BCFE4AA00AFBE89 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233A69B01BCFE4AA00AFBE89 /* AppKit.framework */; settings = {ASSET_TAGS = (); }; };
+		233A69B31BCFE4AA00AFBE89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233A69B21BCFE4AA00AFBE89 /* Foundation.framework */; settings = {ASSET_TAGS = (); }; };
+		233A69B71BCFE4AA00AFBE89 /* Lokaligo.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 233A69B61BCFE4AA00AFBE89 /* Lokaligo.xcscheme */; };
+		233A69BA1BCFE4AA00AFBE89 /* Lokaligo.m in Sources */ = {isa = PBXBuildFile; fileRef = 233A69B91BCFE4AA00AFBE89 /* Lokaligo.m */; };
+		233A69BD1BCFE4AA00AFBE89 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 233A69BC1BCFE4AA00AFBE89 /* NSObject_Extension.m */; };
+		23BC5FC61BCFEA1B004FC77B /* lokaligo_ios.sh in Resources */ = {isa = PBXBuildFile; fileRef = 23BC5FC51BCFEA1B004FC77B /* lokaligo_ios.sh */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		233A69AD1BCFE4AA00AFBE89 /* Lokaligo.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lokaligo.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		233A69B01BCFE4AA00AFBE89 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		233A69B21BCFE4AA00AFBE89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		233A69B61BCFE4AA00AFBE89 /* Lokaligo.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Lokaligo.xcscheme; path = Lokaligo.xcodeproj/xcshareddata/xcschemes/Lokaligo.xcscheme; sourceTree = SOURCE_ROOT; };
+		233A69B81BCFE4AA00AFBE89 /* Lokaligo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lokaligo.h; sourceTree = "<group>"; };
+		233A69B91BCFE4AA00AFBE89 /* Lokaligo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lokaligo.m; sourceTree = "<group>"; };
+		233A69BB1BCFE4AA00AFBE89 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		233A69BC1BCFE4AA00AFBE89 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		233A69BE1BCFE4AA00AFBE89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23BC5FC51BCFEA1B004FC77B /* lokaligo_ios.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = lokaligo_ios.sh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		233A69AB1BCFE4AA00AFBE89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				233A69B11BCFE4AA00AFBE89 /* AppKit.framework in Frameworks */,
+				233A69B31BCFE4AA00AFBE89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		233A69A41BCFE4AA00AFBE89 = {
+			isa = PBXGroup;
+			children = (
+				233A69B41BCFE4AA00AFBE89 /* Lokaligo */,
+				233A69AF1BCFE4AA00AFBE89 /* Frameworks */,
+				233A69AE1BCFE4AA00AFBE89 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		233A69AE1BCFE4AA00AFBE89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				233A69AD1BCFE4AA00AFBE89 /* Lokaligo.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		233A69AF1BCFE4AA00AFBE89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				233A69B01BCFE4AA00AFBE89 /* AppKit.framework */,
+				233A69B21BCFE4AA00AFBE89 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		233A69B41BCFE4AA00AFBE89 /* Lokaligo */ = {
+			isa = PBXGroup;
+			children = (
+				233A69B81BCFE4AA00AFBE89 /* Lokaligo.h */,
+				233A69B91BCFE4AA00AFBE89 /* Lokaligo.m */,
+				233A69BB1BCFE4AA00AFBE89 /* NSObject_Extension.h */,
+				233A69BC1BCFE4AA00AFBE89 /* NSObject_Extension.m */,
+				233A69BE1BCFE4AA00AFBE89 /* Info.plist */,
+				233A69B51BCFE4AA00AFBE89 /* Supporting Files */,
+			);
+			path = Lokaligo;
+			sourceTree = "<group>";
+		};
+		233A69B51BCFE4AA00AFBE89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23BC5FC51BCFEA1B004FC77B /* lokaligo_ios.sh */,
+				233A69B61BCFE4AA00AFBE89 /* Lokaligo.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		233A69AC1BCFE4AA00AFBE89 /* Lokaligo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 233A69C11BCFE4AA00AFBE89 /* Build configuration list for PBXNativeTarget "Lokaligo" */;
+			buildPhases = (
+				233A69A91BCFE4AA00AFBE89 /* Sources */,
+				233A69AA1BCFE4AA00AFBE89 /* Resources */,
+				233A69AB1BCFE4AA00AFBE89 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lokaligo;
+			productName = Lokaligo;
+			productReference = 233A69AD1BCFE4AA00AFBE89 /* Lokaligo.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		233A69A51BCFE4AA00AFBE89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Lokaligo;
+				TargetAttributes = {
+					233A69AC1BCFE4AA00AFBE89 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 233A69A81BCFE4AA00AFBE89 /* Build configuration list for PBXProject "Lokaligo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 233A69A41BCFE4AA00AFBE89;
+			productRefGroup = 233A69AE1BCFE4AA00AFBE89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				233A69AC1BCFE4AA00AFBE89 /* Lokaligo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		233A69AA1BCFE4AA00AFBE89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23BC5FC61BCFEA1B004FC77B /* lokaligo_ios.sh in Resources */,
+				233A69B71BCFE4AA00AFBE89 /* Lokaligo.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		233A69A91BCFE4AA00AFBE89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				233A69BA1BCFE4AA00AFBE89 /* Lokaligo.m in Sources */,
+				233A69BD1BCFE4AA00AFBE89 /* NSObject_Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		233A69BF1BCFE4AA00AFBE89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		233A69C01BCFE4AA00AFBE89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		233A69C21BCFE4AA00AFBE89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = Lokaligo/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "-DDEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lokaligo.Lokaligo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		233A69C31BCFE4AA00AFBE89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = Lokaligo/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lokaligo.Lokaligo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		233A69A81BCFE4AA00AFBE89 /* Build configuration list for PBXProject "Lokaligo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				233A69BF1BCFE4AA00AFBE89 /* Debug */,
+				233A69C01BCFE4AA00AFBE89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		233A69C11BCFE4AA00AFBE89 /* Build configuration list for PBXNativeTarget "Lokaligo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				233A69C21BCFE4AA00AFBE89 /* Debug */,
+				233A69C31BCFE4AA00AFBE89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 233A69A51BCFE4AA00AFBE89 /* Project object */;
+}
