@@ -143,9 +143,9 @@ static NSString * const LokaligoAPIKey = @"com.lokaligo.api_key";
   NSMutableDictionary* env = [NSMutableDictionary dictionaryWithDictionary:[[NSProcessInfo  processInfo] environment]];
   [env setObject:[self getCurrentProjectPath] forKey:@"SRCROOT"];
   [env setObject:apiKey forKey:@"LOKALIGO_API_KEY"];
-#if DEBUG
-  [env setObject:@"1" forKey:@"LOKALIGO_DEV"];
-#endif
+//#if DEBUG
+//  [env setObject:@"1" forKey:@"LOKALIGO_DEV"];
+//#endif
   task.environment = env;
   
   NSAlert *alert = [[NSAlert alloc] init];
