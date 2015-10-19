@@ -133,6 +133,12 @@ static NSString * const LokaligoAPIKey = @"com.lokaligo.api_key";
 
 - (void)runLokaligoWithApiKey:(NSString*)apiKey
 {
+  BOOL isDebug = NO;
+  NSString *devPrefix = @"dev:";
+  if ([apiKey hasPrefix:devPrefix]) {
+    apiKey = [apiKey substringFromIndex:devPrefix.length];
+    isDebug = YES;
+  }
   NSBundle *myBundle = [NSBundle bundleWithIdentifier: @"com.lokaligo.Lokaligo"];
   NSString *scriptPath = [myBundle pathForResource:@"lokaligo_ios" ofType:@"sh"];
   NSTask *task = [[NSTask alloc] init];
@@ -143,9 +149,9 @@ static NSString * const LokaligoAPIKey = @"com.lokaligo.api_key";
   NSMutableDictionary* env = [NSMutableDictionary dictionaryWithDictionary:[[NSProcessInfo  processInfo] environment]];
   [env setObject:[self getCurrentProjectPath] forKey:@"SRCROOT"];
   [env setObject:apiKey forKey:@"LOKALIGO_API_KEY"];
-//#if DEBUG
-//  [env setObject:@"1" forKey:@"LOKALIGO_DEV"];
-//#endif
+  if (isDebug) {
+    [env setObject:@"1" forKey:@"LOKALIGO_DEV"];
+  }
   task.environment = env;
   
   NSAlert *alert = [[NSAlert alloc] init];
@@ -157,17 +163,19 @@ static NSString * const LokaligoAPIKey = @"com.lokaligo.api_key";
   [alert setAccessoryView:progressIndicator];
   
   [task setTerminationHandler:^(NSTask * _Nonnull task) {
-    [NSApp endSheet:[alert window]];
-    
-    if (task.terminationStatus != 0) {
-      NSString *output = [self readAllFromPipe:task.standardOutput];
-      NSString *error = [self readAllFromPipe:task.standardError];
-      NSString *msg = [NSString stringWithFormat:@"Could not run Lokaligo: code: %d\n%@\n%@", task.terminationStatus, error, output];
-      NSAlert *alert = [[NSAlert alloc] init];
-      [alert setMessageText:msg];
-      [alert addButtonWithTitle:@"OK"];
-      [alert runModal];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [NSApp endSheet:[alert window]];
+      
+      if (task.terminationStatus != 0) {
+        NSString *output = [self readAllFromPipe:task.standardOutput];
+        NSString *error = [self readAllFromPipe:task.standardError];
+        NSString *msg = [NSString stringWithFormat:@"Could not run Lokaligo: code: %d\n%@\n%@", task.terminationStatus, error, output];
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:msg];
+        [alert addButtonWithTitle:@"OK"];
+        [alert runModal];
+      }
+    });
   }];
   
   [alert beginSheetModalForWindow:[NSApp mainWindow] completionHandler:^(NSModalResponse returnCode) {
